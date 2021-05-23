@@ -126,3 +126,38 @@ header ul li a {
     max-width: 350px;
     z-index: 1;
 }
+
+.socialMedia {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialMedia li {
+    list-style: none;
+}
+
+.socialMedia li a {
+    display: inline-block;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    background: var(--black2);
+    color: var(--white2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.socialMedia li a .fa {
+    font-size: 1.2em;
+}
+
+.socialMedia li a:hover {
+    background: var(--green);
+}
