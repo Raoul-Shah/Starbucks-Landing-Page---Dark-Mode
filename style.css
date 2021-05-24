@@ -15,6 +15,12 @@
     --black2: #333;
 }
 
+.dark {
+    --black: #fff;
+    --white: #113828;
+    --black2: #124e36;
+}
+
 section {
     position: relative;
     width: 100%;
@@ -63,6 +69,10 @@ header ul li a {
     text-decoration: none;
 }
 
+header ul li a:hover {
+    color: var(--green);
+}
+
 .content {
     position: relative;
     width: 100%;
@@ -90,6 +100,14 @@ header ul li a {
 .content .textBox h2 span {
     font-size: 1.2em;
     color: var(--green);
+}
+
+.dark .content .textBox h2 span {
+    color: #00ff9b;
+}
+
+.content .textBox p {
+    color: var(--black);
 }
 
 .content .textBox a {
@@ -160,4 +178,27 @@ header ul li a {
 
 .socialMedia li a:hover {
     background: var(--green);
+}
+
+.themeSwitch {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: var(--black);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.themeSwitch::before {
+    content: '\f186';
+    font-family: fontAwesome;
+    color: var(--white);
+    font-size: 20px;
+}
+
+.themeSwitch.active::before {
+    content: '\f185';
 }
