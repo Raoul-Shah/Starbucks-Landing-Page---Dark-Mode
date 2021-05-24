@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 :root {
     --black: #333;
     --green: #017143;
@@ -201,4 +205,95 @@ header ul li a:hover {
 
 .themeSwitch.active::before {
     content: '\f185';
+}
+
+@media (max-width: 991px) {
+
+    section {
+        padding: 150px 20px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .socialMedia {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .content .textBox,
+    .content .imgBox {
+        max-width: 100%;
+        /* margin-right: 0px; */
+    }
+
+    .content .imgBox img {
+        max-width: 250px;
+    }
+
+    .content .imgBox::before {
+        /* width: 125px;
+        height: 125px; */
+        clip-path: circle(125px at center);
+    }
+
+    .content .textBox h2 {
+        font-size: 1.75em;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header ul li {
+        margin: 10px 0;
+        margin-left: 0;
+    }
+
+    header ul li a {
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+
+    .toggle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(./img/menu.png);
+        filter: invert(1);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .toggle.active {
+        background: url(./img/close.png);
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .dark .toggle {
+        filter: invert(0);
+    }
 }
