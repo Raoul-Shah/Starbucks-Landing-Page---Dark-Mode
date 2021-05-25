@@ -297,3 +297,22 @@ header ul li a:hover {
         filter: invert(0);
     }
 }
+
+@media (max-width: 600px) {
+    
+   
+.content .imgBox img {
+    margin-top: 20px;
+    max-width: 200px;
+}
+
+.content .imgBox::before {
+    /* width: 125px;
+    height: 125px; */
+    clip-path: circle(100px at center);
+}
+
+.socialMedia {
+    bottom: -90px;
+}
+}
